@@ -1,0 +1,177 @@
+<html> 
+
+<head> <title> Main Game</title>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <style>
+        *{
+           /* background-image: url("https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")*/
+            color:red;
+            background-color:aquamarine;
+        }
+        html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#grid-0, #grid-1, #grid-2, #grid-3, #grid-4, #grid-5, #grid-6, #grid-7, #grid-8{
+    border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  width:100px;
+  height:100px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+
+#root{
+    display: grid;
+  grid-template-columns: auto auto auto;
+  width: 300px;
+  height: 300px;
+}
+
+#info{
+margin-top:20px;
+
+}
+
+
+#scoreboard_container{
+  overflow-y:scroll;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script src="https://use.fontawesome.com/ea42c35968.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+  
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+<body style="background-color:aquamarine">
+
+<section class="hero is-link">
+  
+    <div class="hero-body">
+  
+     <div class="hero is-link" id="scoreboard">
+      <p class="title hero is-link"> Scoreboard</p>
+      <p class="subtitle hero is-link">
+         This is the scoreboard which keeps track of your score against other users! </p>
+      <div  class="hero is-link"   id="scoreboard_container"> 
+       
+       </div>
+       
+       </div>
+      
+      
+      
+
+</div>
+<div class="hero is-danger">
+
+  <div class = "subtitle hero is-danger">
+    <i class=" subtitle hero is-danger fa fa-question">  Did you know?   <i  class="subtitle hero is-danger fa fa-question"></i></i>  
+    <div  class="hero is-danger" id="fact">
+  
+  
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+
+<article style="display:none" id="mess" class="message is-link">
+  <div class="message-header">
+    <p>Game over!</p>
+    <button onclick="del()" class="delete" aria-label="delete"></button>
+  </div>
+  <div id="message-body" class="message-header is-link">
+  
+  </div>
+</article>
+
+    <h1 style="text-align:center" class="title">   Tic-Tac-Toe</h1>
+   
+    <div id="info">
+   
+      <button class="button" onclick="reset()">reset</button>      <button class="button" onclick="logout()"> Log out</button>
+      </div>
+    <section style="text-align:center" class="section float-container">
+     
+      <h2 class="subtitle">
+        
+       
+
+        <div class="float-child" style=" margin: auto; height:140px; width:140px; margin-top:auto;" id="root">
+       
+        </div>
+        <div id="players" class="float-child" style=" margin-top:-85px; max-height:310px; max-width:310px; background-color:yellow;"> </div>
+
+      </h2>
+     
+    </section>
+   
+    
+    <div class="modal" >
+      <div class="modal-background"></div>
+      <div class="modal-card" style="width:100%">
+        <header class="modal-card-head">
+          <p id="title" class="modal-card-title">Modal title</p>
+          <button class="delete" id="close" aria-label="close" onclick="close()"></button>
+        </header>
+        <section id="content" class="modal-card-body">
+    
+        </section>
+        <footer class="modal-card-foot">
+        
+        </footer>
+      </div>
+    </div>
+
+    
+  
+ 
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<script src="firebase.js"> </script>
+<script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+
+<script src = "/gamepage.js"> </script>
+
+
+</body>
+
+
+
+
+
+
+</html>

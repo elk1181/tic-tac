@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> TicTac: Login</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://use.fontawesome.com/ea42c35968.js"></script>
+    <style>
+        html, body {
+    margin: 0;
+    height: 100%;
+}
+    </style>
+</head>
+
+<body style="background-color:aquamarine">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="hero">
+        <div class="hero-body">
+            <h1 style="text-align:center" class="title is-1 "> Enter your email here if you want to sign in</h1>
+
+<form class="form">
+    <div class="field">
+        <label for="email" class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-danger" id="email" type="email" placeholder="Email input" >
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+         
+        </div>
+       
+      </div>
+      
+
+      <div class="field">
+        <label for="pass" class="label">Password</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-danger" aria-describedby="errorMess" id="pass" type="password" placeholder="Password">
+          <span class="icon is-small is-left">
+            <i class="fa fa-key"></i>
+          </span>
+        </div>
+        <div style="color:red" id="errorMess"> </div>
+    </div>
+      </div>
+      <button type="button" onclick="signin()" class="button is-info is-large"> Sign In </button>
+
+
+</form>
+</div>
+</section>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+<script src = "login.js">
+    
+</script>
+
+<script src="firebase.js"> </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
+
+  
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
