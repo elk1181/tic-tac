@@ -27,11 +27,11 @@ firebase.auth().onAuthStateChanged(function(user) {
        sorted.forEach(doc=>{
       
         
-           document.getElementById("scoreboard_container").innerHTML+= doc.data().email + " " + doc.data().score + "<br>";
+  
       
            if(doc.data().email==user.email){
-
-
+            document.getElementById("scoreboard_container").innerHTML= doc.data().email + " " + doc.data().score + "<br>";
+     
 
             $.get("https://catfact.ninja/fact?max_length=140", function(data, status){
           
@@ -331,7 +331,7 @@ function move(i, j){
      if(doc.email==user.email){
          
       score = doc.score;
-       
+      document.getElementById("scoreboard_container").innerHTML= doc.email + " " + score + "<br>";
          db.collection("users").doc(doc.id).update({
           score: score
          })
@@ -349,7 +349,7 @@ function move(i, j){
         }).catch(function(error) {
              console.log(error);
         })
-        document.getElementById("scoreboard_container").innerHTML+= doc.email + " " + score + "<br>";
+      
         $.get("https://catfact.ninja/fact?max_length=140", function(data, status){
            
         document.getElementById("fact").innerHTML= data.fact;
@@ -357,7 +357,7 @@ function move(i, j){
          
    }
    else{
-    document.getElementById("scoreboard_container").innerHTML+= doc.email + " " + doc.score + "<br>";
+   
    }
    
    
