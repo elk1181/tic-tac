@@ -23,7 +23,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       db.collection("users").get().then((querySnapshot) => {
        let sorted =  querySnapshot.docs.sort(function(a, b){return b.data().score-a.data().score});
 
-        console.log(sorted[0].data().score);
+        
        sorted.forEach(doc=>{
       
         
@@ -34,7 +34,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
             $.get("https://catfact.ninja/fact?max_length=140", function(data, status){
-                console.log(data);
+          
             document.getElementById("fact").innerHTML= data.fact;
               });
    
@@ -44,7 +44,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		
 	
 
-        var pf = new petfinder.Client({apiKey: "FiZcZDrG1yH8M5A5ZFGfQoElVyElz38YdWwG7A2SP7nC7SdW5t", secret: "rJbX7xvs9ttUrQgxEyODvO41nQKPDEysivrd6M5D" });
+        var pf = new petfinder.Client({apiKey: api_pet, secret: secret_pet });
 
         pf.animal.search()
             .then(function (response) {
@@ -64,7 +64,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                
                 
               }).then(resp => {
-                  console.log(resp.data.animals)
+                
             kittyObj = resp.data.animals
               });
 	 
@@ -89,7 +89,7 @@ function getImages(){
   $.ajax({
     url: "https://api.thecatapi.com/v1/images/search",
     type: "GET",
-    beforeSend: function(xhr){xhr.setRequestHeader('key',"60346995-ed50-49c4-b245-9b4e2b3173e9",
+    beforeSend: function(xhr){xhr.setRequestHeader('key', api_cat,
     )},
     success: function(data) {imageKitty = data[0].url;  
        
@@ -337,7 +337,7 @@ function move(i, j){
          })
          .then(function() {
              if(score%5==0){
-           console.log( kittyObj);
+       
            document.getElementsByClassName("modal")[0].classList.add("is-active");
            2341
 
@@ -351,7 +351,7 @@ function move(i, j){
         })
         document.getElementById("scoreboard_container").innerHTML+= doc.email + " " + score + "<br>";
         $.get("https://catfact.ninja/fact?max_length=140", function(data, status){
-            console.log(data);
+           
         document.getElementById("fact").innerHTML= data.fact;
           });
          
@@ -389,7 +389,7 @@ reset();
 }
 
 $(document).on('click','#close',function(){
-    console.log("hello")
+  
 
     document.getElementsByClassName("modal")[0].classList.remove("is-active");
 });
@@ -415,7 +415,7 @@ $(document).on('click','#email',function(){
     }).then(
     document.getElementById("content").innerText = "message sent!"
     );
-    console.log("hello")
+  
     document.getElementsByClassName("modal")[0].classList.remove("is-active");
 }
 else{

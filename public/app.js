@@ -31,9 +31,6 @@ app.get('/login', function(req,res) {
 });
 
 
-
-
-
 app.get('signup.html', function(req,res) {
   data= fs.readFile('signup.html',   function (err, data) {
   res.setHeader('Content-Type', 'text/html');
@@ -46,7 +43,7 @@ app.get('gamepage.html', function(req,res) {
   res.send(data);
 });
 })
-app.use("/static", express.static('./static/'));
+
  module.exports = router;
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
