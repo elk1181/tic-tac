@@ -327,7 +327,6 @@ function move(i, j){
          sortedK.forEach(doc=>{
                               
              
-     // User is signed in.
      if(doc.email==user.email){
          
       score = doc.score;
@@ -370,7 +369,7 @@ function move(i, j){
        reset();
        }
         else {
-           // No user is signed in.
+       
          }
    
     }
